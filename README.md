@@ -1,6 +1,6 @@
 # Bootstrap-Portfolio
 ## Description
-This is a portfolio website for bootcam challenge week 2.
+This is a portfolio website with Bootstrap for bootcamp challenge week 3.
 ## URL
 https://kacperski81.github.io/Bootstrap-Portfolio/
 ## Screenshot
