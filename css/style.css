@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, 
+  body {
+    width: 100vw;
+    height: 100%;
+  }
+  
+  /* Custom Properties */
+  
+  :root {
+    --clr-background: #fff;
+    --clr-light: #f0f3bd;
+    --clr-dark: #05668d;
+    --clr-accent: #02c39a;
+    --clr-font: #000;
+  
+    --fs-h1: 4rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
+  }
+
+  /* header with navigation */
+
+  header {
+    background-color: var(--clr-light);
+  }
+
+  .navbar-brand {
+    background-color: var(--clr-dark);
+    color: var(--clr-light) !important;
+    padding: 5px 20px;
+    box-shadow: var(--bs);
+  }
+
+  .nav-link {
+    color: var(--clr-dark) !important;
+  }
+
+  .nav-link:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light) !important;
+    box-shadow: var(--bs);
+  }
+
+  /* jumbotorn hero section  */
+
+  .jumbotron {
+    background-color: var(--clr-background) !important;
+    padding: 5px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .jumbotron img {
+    box-shadow: var(--bs);
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+
+  }
+
+  .jumbotron .row div:nth-of-type(2) {
+    margin-top: 5px;
+    background-color: var(--clr-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-dark);
+  }
+
+  .lead {
+    padding-right: 20px;
+    background-color: var(--clr-dark);
+    text-align: right;
+    color: var(--clr-light);
+    align-self: stretch;
+  }
+
+  /* work section */
+
+  .portfolio > h3,
+  .skills h3,
+  .about h3,
+  .contact h3 {
+    text-align: center;
+    border-bottom: 5px solid var(--clr-dark);
+    color: var(--clr-dark);
+  }
+  
+  .portfolio .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* skills section */
+
+  .skills ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+
+  /* about sectcion */
+
+  .about p {
+    padding: 5px 10px;
+    padding-right: 20px;
+  }
+
+  /* contact section */
+
+  .contact p {
+    padding-left: 20px;
+  }
+
+  .contact img {
+    max-width: 25px;
+  }
+
+  .contact img:hover {
+    box-shadow: var(--bs);
+  }
+
+  .contact > div {
+    display: flex;
+  }
+
+  /* footer section  */
+  
+  footer p {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center;
+    padding: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .portfolio,
+    .skills,
+    .about,
+    .contact {
+      display: grid;
+      grid-template-columns: 150px auto;
+    }
+
+    .portfolio h3,
+    .skills h3,
+    .about h3,
+    .contact h3 {
+      padding-right: 10px;
+      border-right: 5px solid var(--clr-dark);
+      border-bottom: none;
+    }
+
+    .portfolio .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 300px);
+      gap: 10px;
+    }
+
+    .portfolio .container .card {
+      max-height: 300px;
+    }
+
+    .card img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+
+  }
+
+  @media (min-width: 1024px) {
+    .portfolio .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 300px);
+      gap: 10px;
+    }
+  }
